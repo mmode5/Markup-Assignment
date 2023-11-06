@@ -1,0 +1,158 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+@import "../base/typography";
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 2.4rem;
+
+  .product-info {
+    display: flex;
+    gap: 1.6rem;
+
+    .product-name-and-price {
+      display: flex;
+      flex-direction: column;
+
+      .product-name {
+        @include fontStyles(1.5rem, 700, 2.5rem, 0);
+      }
+
+      .product-price {
+        @include fontStyles(1.4rem, 500, 2.5rem, 0);
+      }
+    }
+  }
+
+  .mini-increase-decrease {
+    width: 9.6rem;
+    height: 3.2rem;
+    padding: 0 1.15rem;
+    background-color: $gray_white;
+    gap: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+      border: none;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        color: $dark_brown;
+      }
+    }
+
+    p {
+      @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+    }
+  }
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.products {
+  position: absolute;
+  top: 12.24rem;
+  right: 2.4rem;
+  left: 2.4rem;
+  padding: 3.1rem 2.8rem;
+  max-width: 100%;
+  border-radius: 0.8rem;
+  background-color: $white;
+
+  .number-of-products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3.1rem;
+
+    h2 {
+      @include fontStyles(1.8rem, 700, 2.5rem, 0.128rem);
+    }
+
+    p {
+      @include fontStyles(1.5rem, 500, 2.5rem, 0);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    p:hover {
+      color: $dark_brown;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.2rem 0 0;
+
+    p {
+      @include fontStyles(1.5rem, 500, 2.5rem, 0rem);
+      text-transform: uppercase;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  a {
+    button {
+      @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+      margin: 2.4rem 0 0;
+      width: 100%;
+      height: 4.8rem;
+      border: none;
+      cursor: pointer;
+      background-color: $dark_brown;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    button:hover {
+      background-color: $light_brown;
+    }
+  }
+}
+
+// media for that
+@media (min-width: 425px) {
+  .products {
+    width: 37.7rem;
+    right: 0;
+    left: calc(100% - 37.7rem - 2.4rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    top: 12.74rem;
+    left: calc(100% - 37.7rem - 4rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .products {
+    top: 12.64rem;
+    left: calc(100% - 37.7rem - 16.5rem);
+  }
+}

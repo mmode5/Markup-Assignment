@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <script src="../javaScript/hamburgerMenu.js" defer></script>
+    <script src="../javaScript/preventSomeCharacters.js" defer></script>
+    <script src="../javaScript/cart.js" defer></script>
+    <script src="../javaScript/infoAboutProducts.js" defer></script>
+    <script src="../javaScript/checkoutList.js" defer></script>
+   
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Audiophile e-commerce website</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <div class="header-left-part">
+          <a
+            href="javascript:void(0);"
+            onclick="myFunction()"
+            class="hamburger-menu"
+          >
+            <button>
+              <img src="../assets/shared/tablet/icon-hamburger.svg" alt="Hamburger menu icon" />
+            </button>
+          </a>
+          <a href="./index.html"
+            ><img src="../assets/shared/desktop/logo.svg" alt="Company logo"
+          /></a>
+        </div>
+        <div class="header-links">
+          <a href="./index.html" class="link-home">Home</a>
+          <a href="./headphones.html" class="link-headphones">headphones</a>
+          <a href="./speakers.html" class="link-speakers">speakers</a>
+          <a href="./earphones.html" class="link-earphones">earphones</a>
+        </div>
+        <div class="header-right-part">
+          <button id="cart" disabled>
+            <img src="../assets/shared/desktop/icon-cart.svg" alt="Product cart icon" />
+          </button>
+        </div>
+      </div>
+      <div class="hidden-div" id="hidden-div">
+        <div class="div div-1">
+          <div class="img-div img-div-1">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-headphones.png"
+              alt="Image of a headphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>headphones</p>
+          <a href="./headphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-2">
+          <div class="img-div img-div-2">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-speakers.png"
+              alt="Image of a speaker"
+              class="accessory-img"
+            />
+          </div>
+          <p>speakers</p>
+          <a href="./speakers.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-3">
+          <div class="img-div img-div-3">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-earphones.png"
+              alt="Image of a earphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>earphones</p>
+          <a href="./earphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <a href="javascript:history.back()" class="goBack">Go Back</a>
+      <div class="form-container">
+        <form class="form" action="">
+          <div class="form-top">
+            <h1>checkout</h1>
+            <div class="billing-details details">
+              <h3>Billing details</h3>
+              <div class="input-field-1 input-field">
+                <div class="input-1 input">
+                  <label for="name">Name<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Alexei Ward"
+                  />
+                </div>
+                <div class="input-2 input">
+                  <label for="email">Email Address<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="alexei@mail.com"
+                  />
+                </div>
+                <div class="input-3 input">
+                  <label for="phone">Phone Number<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 202-555-0136"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="shipping-info details">
+              <h3>shipping info</h3>
+              <div class="input-field-2 input-field">
+                <div class="input-4 input">
+                  <label for="address">Your Address<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="1137 Williams Avenue"
+                  />
+                </div>
+                <div class="input-5 input">
+                  <label for="zip">ZIP Code<small class="small">Field cannot be empty</small></label>
+                  <input type="number" id="zip" name="zip" placeholder="10001" />
+                </div>
+                <div class="input-6 input">
+                  <label for="city">City<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="New York"
+                  />
+                </div>
+                <div class="input-7 input">
+                  <label for="country">Country<small class="small">Field cannot be empty</small></label>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="United States"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="payment-details details">
+              <h3>payment details</h3>
+              <div class="payment">
+                <p>Payment Method</p>
+                <div class="label-div">
+                  <div class="choice-1 choice">
+                    <input type="radio" name="payment" id="input1" checked="true" />
+                    <label id="label1" class="label label1" for="input1" style="user-select:none">e-Money</label>
+                  </div>
+                  <div class="choice-2 choice">
+                    <input type="radio" name="payment" id="input2" />
+                    <label id="label2" class="label label2" for="input2" style="user-select:none">Cash on Delivery</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-info details">
+              <div class="input-field-3 input-field">
+                <div class="input-8 input">
+                  <label for="eMoneyNum">e-Money Number<small class="small">Field cannot be empty</small></label>
+                  <input type="number" id="eMoneyNum" name="eMoneyNum" placeholder="238521993" />
+                </div>
+                <div class="input-9 input">
+                  <label for="eMoneyPIN">e-Money PIN<small class="small">Field cannot be empty</small></label>
+                  <input type="number" id="eMoneyPIN" name="eMoneyPIN" placeholder="6891" />
+                </div>
+              </div>
+            </div>
+            <div class="information">
+              <img src="../assets/checkout/icon-cash-on-delivery.svg" alt="Icon of a deal. delivery is getting money and in exchange gives a product which was ordered">
+              <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+            </div>
+          </div>
+        </form>
+        <div class="form-bottom">
+          <h2>summary</h2>
+          <div class="product-list"></div>
+          <div class="pay-amount">
+            <div class="pay-1 pay">
+              <p class="name-of-pay">TOTAL</p>
+              <p class="price-of-product price-TOTAL">$ 0</p>
+            </div>
+            <div class="pay-2 pay">
+              <p class="name-of-pay">SHIPPING</p>
+              <p class="price-of-product price-SHIPPING">$ 0</p>
+            </div>
+            <div class="pay-3 pay">
+              <p class="name-of-pay">VAT (INCLUDED)</p>
+              <p class="price-of-product price-VAT">$ 0</p>
+            </div>
+            <div class="pay-4 pay">
+              <p class="name-of-pay">GRAND TOTAL</p>
+              <p class="price-of-product price-GRAND">$ 0</p>              
+            </div>
+          </div>
+          <div class="submitDiv">
+            <button type="submit" class="submit-button">CONTINUE & PAY</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-flex-top">
+        <a href="#"><img src="../assets/shared/desktop/logo.svg" alt="Company logo" /></a>
+        <div class="footer-links">
+          <a href="#" class="link-home">Home</a>
+          <a href="./headphones.html" class="link-headphones">headphones</a>
+          <a href="./speakers.html" class="link-speakers">speakers</a>
+          <a href="./earphones.html" class="link-earphones">earphones</a>
+        </div>
+      </div>
+      <p class="big-p">
+        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        small team of music lovers and sound specialists who are devoted to
+        helping you get the most out of personal audio. Come and visit our demo
+        facility - we’re open 7 days a week.
+      </p>
+      <div class="footer-flex-bottom">
+        <p class="small-p">Copyright 2021. All Rights Reserved</p>
+        <div class="social-links">
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-facebook.svg" alt="Facebook icon"
+          /></a>
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-twitter.svg" alt="Twitter icon"
+          /></a>
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-instagram.svg" alt="Instagram icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div id="overlay">
+      <div class="products">
+        <div class="number-of-products">
+          <h2 class="all_quantity">Cart (0)</h2>
+          <p id="remove-all">Remove all</button>
+        </div>
+        <div class="item-list"></div>
+        <div class="total">
+          <p>Total</p>
+          <p class="total_price">$ 0</p>
+        </div>
+        <a href="./checkout.html"><button class="checkout">checkout</button></a>
+      </div>
+      <div class="thank_you_note">
+        <img src="../assets/checkout/icon-order-confirmation.svg" alt="Order confirmation icon">
+        <h1>thank you<br>for your order</h1>
+        <p>You will receive an email confirmation shortly.</p>
+        <div class="itemsInfo">
+          <div class="itemsListed">
+            <div class="listed"></div>
+            <div class="border-div"></div>
+            <div class="divForP"><p class="someP">and 0 other item(s)</p></div>
+          </div>
+          <div class="itemsPrice">
+            <p>grand total</p>
+            <h3 class="grandTotal">$ 0</h3>
+          </div>
+        </div>
+        <a href="./index.html"><button class="back-to-home">back to home</button></a>
+      </div>
+    </div>
+  </body>
+</html>

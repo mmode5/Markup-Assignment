@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../css/product.css" />
+    <script src="../javaScript/hamburgerMenu.js" defer></script>
+    <script src="../javaScript/transaction.js" defer></script>
+    <script src="../javaScript/cart.js" defer></script>
+    <script src="../javaScript/infoAboutProducts.js" defer></script>
+   
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Audiophile e-commerce website</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-div">
+        <div class="header-left-part">
+          <a
+            href="javascript:void(0);"
+            onclick="myFunction()"
+            class="hamburger-menu"
+          >
+            <button>
+              <img src="../assets/shared/tablet/icon-hamburger.svg" alt="Hamburger menu icon" />
+            </button>
+          </a>
+          <a href="./index.html"><img src="../assets/shared/desktop/logo.svg" alt="Company logo" /></a>
+        </div>
+        <div class="header-links">
+          <a href="./index.html" class="link-home">Home</a>
+          <a href="./headphones.html" class="link-headphones">headphones</a>
+          <a href="./speakers.html" class="link-speakers">speakers</a>
+          <a href="./earphones.html" class="link-earphones">earphones</a>
+        </div>
+        <div class="header-right-part">
+          <button id="cart">
+            <img src="../assets/shared/desktop/icon-cart.svg" alt="Product cart icon" />
+          </button>
+        </div>
+      </div>
+      <div class="hidden-div" id="hidden-div">
+        <div class="div div-1">
+          <div class="img-div img-div-1">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-headphones.png"
+              alt="Image of a headphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>headphones</p>
+          <a href="./headphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-2">
+          <div class="img-div img-div-2">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-speakers.png"
+              alt="Image of a speaker"
+              class="accessory-img"
+            />
+          </div>
+          <p>speakers</p>
+          <a href="./speakers.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-3">
+          <div class="img-div img-div-3">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-earphones.png"
+              alt="Image of a earphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>earphones</p>
+          <a href="./earphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <a href="javascript:history.back()" class="goBack">Go Back</a>
+      <div class="section section-1">
+        <div class="product-img">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="../assets/product-xx59-headphones/desktop/image-product.jpg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="../assets/product-xx59-headphones/tablet/image-product.jpg"
+            />
+            <img
+              src="../assets/product-xx59-headphones/mobile/image-product.jpg"
+              alt="image of a headphone"
+            />
+          </picture>
+        </div>
+        <div class="product-content">
+          <h1>
+            XX59<br />
+            Headphones
+          </h1>
+          <p class="description">
+            Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
+          </p>
+          <div class="pricing">
+            <p class="price XX59-price">$ 899</p>
+            <div class="amount">
+              <div class="increase-decrease">
+                <button id="minus">-</button>
+                <p id="amount" class="XX59-amount">1</p>
+                <button id="plus">+</button>
+              </div>
+              <button id="cart-add" class="XX59">add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section-2">
+        <div class="info-1">
+          <h2>features</h2>
+          <p class="top-p">These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.</p>
+          <p class="bottom-p">More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the  XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.</p>
+        </div>
+        <div class="info-2">
+          <h2>in the box</h2>
+          <div class="inner-info">
+            <p><span>1x</span>Headphone Unit</p>
+            <p><span>2x</span>Replacement Earcups</p>
+            <p><span>1x</span>User Manual</p>
+            <p><span>1x</span>3.5mm 5m Audio Cable</p>
+          </div>
+        </div>
+      </div>
+      <div class="section section-3">
+        <div class="left">
+          <div class="img-1 img">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="../assets/product-xx59-headphones/desktop/image-gallery-1.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/product-xx59-headphones/tablet/image-gallery-1.jpg"
+              />
+              <img
+                src="../assets/product-xx59-headphones/mobile/image-gallery-1.jpg"
+                alt="image of a headphone"
+              />
+            </picture>
+          </div>
+          <div class="img-2 img">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="../assets/product-xx59-headphones/desktop/image-gallery-2.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/product-xx59-headphones/tablet/image-gallery-2.jpg"
+              />
+              <img
+                src="../assets/product-xx59-headphones/mobile/image-gallery-2.jpg"
+                alt="image of a headphone"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="right">
+          <div class="img-3 img">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="../assets/product-xx59-headphones/desktop/image-gallery-3.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/product-xx59-headphones/tablet/image-gallery-3.jpg"
+              />
+              <img
+                src="../assets/product-xx59-headphones/mobile/image-gallery-3.jpg"
+                alt="image of a headphone"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="section section-4">
+        <h2>you may also like</h2>
+        <div class="sugestions">
+          <div class="sugestion-1 sugestion">
+            <div class="sugestion-image">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="../assets/shared/desktop/image-xx99-mark-two-headphones.jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="../assets/shared/tablet/image-xx99-mark-two-headphones.jpg"
+                />
+                <img
+                  src="../assets/shared/mobile/image-xx99-mark-two-headphones.jpg"
+                  alt="image of a headphone"
+                />
+              </picture>
+            </div>
+            <div class="sugestion-content">
+              <h2>xx99 mark II</h2>
+              <a href="./product-xx99-mark-two-headphones.html"><button class="btn btn-primary">See Product</button></a>
+            </div>
+          </div>
+          <div class="sugestion-2 sugestion">
+            <div class="sugestion-image">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="../assets/shared/desktop/image-xx99-mark-one-headphones.jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="../assets/shared/tablet/image-xx99-mark-one-headphones.jpg"
+                />
+                <img
+                  src="../assets/shared/mobile/image-xx99-mark-one-headphones.jpg"
+                  alt="image of a headphone"
+                />
+              </picture>
+            </div>
+            <div class="sugestion-content">
+              <h2>XX99 MARK I</h2>
+              <a href="./product-xx99-mark-one-headphones.html"><button class="btn btn-primary">See Product</button></a>
+            </div>
+          </div>
+          <div class="sugestion-3 sugestion">
+            <div class="sugestion-image">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="../assets/shared/desktop/image-zx9-speaker.jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="../assets/shared/tablet/image-zx9-speaker.jpg"
+                />
+                <img
+                  src="../assets/shared/mobile/image-zx9-speaker.jpg"
+                  alt="image of a speaker"
+                />
+              </picture>
+            </div>
+            <div class="sugestion-content">
+              <h2>zx9 speaker</h2>
+              <a href="./product-zx9-speaker.html"><button class="btn btn-primary">See Product</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section-5">
+        <div class="div div-1">
+          <div class="img-div img-div-1">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-headphones.png"
+              alt="Image of a headphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>headphones</p>
+          <a href="./headphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-2">
+          <div class="img-div img-div-2">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-speakers.png"
+              alt="Image of a speaker"
+              class="accessory-img"
+            />
+          </div>
+          <p>speakers</p>
+          <a href="./speakers.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+        <div class="div div-3">
+          <div class="img-div img-div-3">
+            <img
+              src="../assets/shared/desktop/image-category-thumbnail-earphones.png"
+              alt="Image of a earphone"
+              class="accessory-img"
+            />
+          </div>
+          <p>earphones</p>
+          <a href="./earphones.html">
+            <p>shop</p>
+            <img src="../assets/shared/desktop/icon-arrow-right.svg" alt="Arrow icon" />
+          </a>
+        </div>
+      </div>
+      <div class="section section-6">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="../assets/shared/desktop/image-best-gear.jpg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="../assets/shared/tablet/image-best-gear.jpg"
+          />
+          <img src="../assets/shared/mobile/image-best-gear.jpg" alt="Image of a men wearing a headphone" />
+        </picture>
+        <div class="text-content">
+          <h2>Bringing you the <span>best</span> audio gear</h2>
+          <p>
+            Located at the heart of New York City, Audiophile is the premier
+            store for high end headphones, earphones, speakers, and audio
+            accessories. We have a large showroom and luxury demonstration rooms
+            available for you to browse and experience a wide range of our
+            products. Stop by our store to meet some of the fantastic people who
+            make Audiophile the best place to buy your portable audio equipment.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-flex-top">
+        <a href="./index.html"><img src="../assets/shared/desktop/logo.svg" alt="Company logo" /></a>
+        <div class="footer-links">
+          <a href="#" class="link-home">Home</a>
+          <a href="./headphones.html" class="link-headphones">headphones</a>
+          <a href="./speakers.html" class="link-speakers">speakers</a>
+          <a href="./earphones.html" class="link-earphones">earphones</a>
+        </div>
+      </div>
+      <p class="big-p">
+        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        small team of music lovers and sound specialists who are devoted to
+        helping you get the most out of personal audio. Come and visit our demo
+        facility - we’re open 7 days a week.
+      </p>
+      <div class="footer-flex-bottom">
+        <p class="small-p">Copyright 2021. All Rights Reserved</p>
+        <div class="social-links">
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-facebook.svg" alt="Facebook icon"
+          /></a>
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-twitter.svg" alt="Twitter icon"
+          /></a>
+          <a href="#"
+            ><img src="../assets/shared/desktop/icon-instagram.svg" alt="Instagram icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div id="overlay">
+      <div class="products">  
+      <div class="number-of-products">
+        <h2 class="all_quantity">Cart (0)</h2>
+        <p id="remove-all">Remove all</button>
+      </div>
+      <div class="item-list"></div>
+      <div class="total">
+        <p>Total</p>
+        <p class="total_price">$ 0</p>
+      </div>
+      <a href="./checkout.html"><button class="checkout">checkout</button></a>
+    </div>    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@import "../base/typography";
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.btn {
+  width: 16rem;
+  height: 4.8rem;
+  @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &-primary {
+    background-color: $dark_brown;
+    color: $white;
+
+    &:hover {
+      background-color: $light_brown;
+    }
+  }
+
+  &-secondary {
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  &-third {
+    background-color: inherit;
+    color: $black;
+    border: 0.2rem solid $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

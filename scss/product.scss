@@ -1,0 +1,711 @@
+@import "./base/reset";
+@import "./base/typography";
+@import "./abstracts/colors";
+@import "./abstracts/mixins";
+@import "./layout/footer";
+@import "./layout/cart";
+@import "./components/buttons";
+
+body {
+  header {
+    .header-div {
+      background-color: $almost_black;
+      border-bottom: 0.1rem solid $white;
+      padding: 3.2rem 2.4rem;
+      display: flex;
+      justify-content: space-between;
+
+      .header-left-part {
+        display: flex;
+        gap: 6rem;
+
+        a {
+          button {
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .header-links {
+        display: none;
+
+        .link-home:hover,
+        .link-headphones:hover,
+        .link-speakers:hover,
+        .link-earphones:hover {
+          color: $dark_brown;
+        }
+      }
+
+      .header-right-part {
+        button {
+          background-color: inherit;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // media for header div
+    @media (min-width: 768px) {
+      .header-div {
+        padding: 3.7rem 4rem 3.2rem;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .header-div {
+        .header-left-part {
+          .hamburger-menu {
+            display: none;
+          }
+        }
+
+        .header-links {
+          display: flex;
+          gap: 3.4rem;
+
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+            @include fontStyles(1.3rem, 700, 2.5rem, 0.2rem);
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .header-div {
+        padding: 3.2rem 16.5rem 3.6rem;
+      }
+    }
+
+    // hidden div
+    .hidden-div {
+      padding: 8.4rem 2.4rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6.8rem;
+      display: none;
+
+      .div {
+        width: 100%;
+        height: 16.5rem;
+        border-radius: 0.8rem;
+        background-color: $gray_white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-div {
+          width: 13.8rem;
+          height: 8.8rem;
+
+          .accessory-img {
+            position: relative;
+            top: -4rem;
+          }
+        }
+
+        .img-div-3 {
+          width: 16.5rem;
+        }
+
+        p {
+          @include fontStyles(1.5rem, 900, 2rem, 0.107rem);
+          text-transform: uppercase;
+        }
+
+        a {
+          margin: 1.7rem 0 0;
+          display: flex;
+          align-items: center;
+          gap: 1.33rem;
+          text-decoration: none;
+
+          p {
+            color: $black;
+            text-transform: uppercase;
+            @include fontStyles(1.3rem, 500, 1.8rem, 0.1rem);
+          }
+
+          img {
+            width: 0.9rem;
+            height: 1.4rem;
+          }
+
+          &:hover {
+            p {
+              color: $dark_brown;
+            }
+          }
+        }
+      }
+    }
+
+    // media for hidden div
+    @media (min-width: 550px) {
+      .hidden-div {
+        padding: 10.8rem 4rem 6.7rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+        .div {
+          max-width: 35rem;
+        }
+      }
+    }
+  }
+
+  main {
+    position: relative;
+
+    .goBack {
+      display: inline-block;
+      margin: 1.6rem 0 0 2.4rem;
+      text-decoration: none;
+      color: $black;
+    }
+
+    // section 1
+    .section-1 {
+      padding: 2.4rem 2.4rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      .product-img {
+        picture {
+          img {
+            border-radius: 0.8rem;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .product-content {
+        h3 {
+          @include fontStyles(1.4rem, 400, 1.9rem, 1rem);
+          color: $dark_brown;
+          text-transform: uppercase;
+        }
+
+        h1 {
+          @include fontStyles(2.8rem, 700, 3.8rem, 0.1rem);
+          text-transform: uppercase;
+          margin: 2.4rem 0 0;
+        }
+
+        .description {
+          @include fontStyles(1.5rem, 500, 2.5rem, 0);
+          margin: 2.4rem 0 0;
+        }
+
+        .pricing {
+          margin: 2.4rem 0 0;
+
+          .price {
+            @include fontStyles(1.8rem, 700, 2.5rem, 0.128rem);
+          }
+
+          .amount {
+            margin: 3.1rem 0 0;
+            display: flex;
+            gap: 1.6rem;
+
+            .increase-decrease {
+              width: 12rem;
+              height: 4.8rem;
+              padding: 0 1.55rem;
+              //flex
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 2rem;
+              //background
+              background-color: $gray_white;
+
+              button {
+                @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+                border: none;
+                cursor: pointer;
+                background-color: inherit;
+                color: $black;
+
+                &:hover,
+                &:active {
+                  color: $dark_brown;
+                  background-color: inherit;
+                }
+              }
+
+              p {
+                @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+              }
+            }
+
+            button {
+              width: 16rem;
+              height: 4.8rem;
+              @include fontStyles(1.3rem, 700, 1.8rem, 0.1rem);
+              border: none;
+              outline: none;
+              cursor: pointer;
+              text-transform: uppercase;
+              background-color: $dark_brown;
+              color: $white;
+
+              &:hover {
+                background-color: $light_brown;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // media for section 1 and goBack
+    @media (min-width: 768px) {
+      .goBack {
+        margin: 3.3rem 0 0 4rem;
+      }
+
+      .section-1 {
+        padding: 2.4rem 3.9rem 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 6.9rem;
+
+        .product-content {
+          h3 {
+            @include fontStyles(1.2rem, 400, 1.6rem, 0.857rem);
+          }
+
+          h1 {
+            line-height: 3.2rem;
+          }
+
+          .description,
+          .pricing {
+            margin: 3.2rem 0 0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .goBack {
+        margin: 7.9rem 0 0 16.5rem;
+      }
+
+      .section-1 {
+        padding: 5.6rem 16.5rem 0;
+        gap: 12.45rem;
+
+        .product-content {
+          h3 {
+            @include fontStyles(1.4rem, 400, 1.9rem, 1rem);
+          }
+
+          h1 {
+            margin: 1.6rem 0 0;
+            @include fontStyles(4rem, 700, 4.4rem, 0.142rem);
+          }
+
+          .pricing {
+            .amount {
+              margin: 4.7rem 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    // section 2
+    .section-2 {
+      padding: 8.8rem 2.4rem 0;
+      // flex
+      display: flex;
+      flex-direction: column;
+      gap: 8.8rem;
+
+      .info-1 {
+        h2 {
+          @include fontStyles(2.4rem, 700, 3.6rem, 0.085rem);
+          text-transform: uppercase;
+        }
+
+        p {
+          @include fontStyles(1.5rem, 500, 2.5rem, 0);
+          margin: 2.4rem 0 0;
+        }
+      }
+
+      .info-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        h2 {
+          text-transform: uppercase;
+          @include fontStyles(2.4rem, 700, 3.6rem, 0.085rem);
+        }
+
+        .inner-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          p {
+            @include fontStyles(1.5rem, 500, 2.5rem, 0);
+
+            span {
+              font-weight: 700;
+              color: $dark_brown;
+              margin: 0 2.4rem 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    // media for section 2
+    @media (min-width: 768px) {
+      .section-2 {
+        padding: 12rem 4rem 0;
+        gap: 12rem;
+
+        .info-1 {
+          h2 {
+            @include fontStyles(3.2rem, 700, 3.6rem, 0.114rem);
+          }
+
+          .top-p {
+            margin: 3.2rem 0 0;
+          }
+        }
+
+        .info-2 {
+          flex-direction: row;
+          gap: 16.9rem;
+
+          h2 {
+            font-size: 3.2rem;
+            letter-spacing: 0.114rem;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-2 {
+        padding: 16rem 16.5rem 0;
+        gap: 12.5rem;
+        flex-direction: row;
+
+        .info-1 {
+          max-width: 62.5rem;
+        }
+
+        .info-2 {
+          flex-direction: column;
+          gap: 3.2rem;
+        }
+      }
+    }
+
+    //section 3
+    .section-3 {
+      padding: 8.8rem 2.4rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .left,
+      .right {
+        .img {
+          picture {
+            img {
+              border-radius: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    // media for section 3
+    @media (min-width: 768px) {
+      .section-3 {
+        padding: 12rem 3.9rem 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.8rem;
+
+        .left {
+          gap: 2rem;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-3 {
+        padding: 16rem 16.5rem 0;
+      }
+    }
+
+    // section 4
+    .section-4 {
+      padding: 12rem 2.4rem 0;
+
+      h2 {
+        @include fontStyles(2.4rem, 700, 3.6rem, 0.085rem);
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .sugestions {
+        margin: 4rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5.6rem;
+
+        .sugestion {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3.2rem;
+
+          .sugestion-image {
+            picture {
+              img {
+                border-radius: 0.8rem;
+              }
+            }
+          }
+
+          .sugestion-content {
+            h2 {
+              @include fontStyles(2.4rem, 700, 3.3rem, 0.171rem);
+            }
+
+            a {
+              margin: 0;
+
+              button {
+                margin: 2.8rem 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // media for section 4
+    @media (min-width: 768px) {
+      .section-4 {
+        padding-inline: 3.9rem;
+
+        h2 {
+          @include fontStyles(3.2rem, 700, 3.6rem, 0.114rem);
+        }
+
+        .sugestions {
+          margin: 5.6rem 0 0;
+          flex-direction: row;
+          gap: 1.1rem;
+
+          .sugestion {
+            gap: 4rem;
+
+            .sugestion-content {
+              a {
+                button {
+                  margin: 3.2rem 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-4 {
+        padding: 16rem 16.5rem 0;
+
+        .sugestions {
+          margin: 6.4rem 0 0;
+          gap: 3rem;
+        }
+      }
+    }
+
+    // section 5
+    .section-5 {
+      padding: 12rem 2.4rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6.8rem;
+
+      .div {
+        width: 32.7rem;
+        height: 16.5rem;
+        border-radius: 0.8rem;
+        background-color: $gray_white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-div {
+          width: 13.8rem;
+          height: 8.8rem;
+
+          .accessory-img {
+            position: relative;
+            top: -4rem;
+          }
+        }
+
+        .img-div-3 {
+          width: 16.5rem;
+        }
+
+        p {
+          @include fontStyles(1.5rem, 900, 2rem, 0.107rem);
+          text-transform: uppercase;
+        }
+
+        a {
+          margin: 1.7rem 0 0;
+          display: flex;
+          align-items: center;
+          gap: 1.33rem;
+          text-decoration: none;
+
+          p {
+            color: $black;
+            text-transform: uppercase;
+            @include fontStyles(1.3rem, 500, 1.8rem, 0.1rem);
+          }
+
+          img {
+            width: 0.9rem;
+            height: 1.4rem;
+          }
+        }
+
+        a:hover {
+          p {
+            color: $dark_brown;
+          }
+        }
+      }
+    }
+
+    // media for section 5
+    @media (min-width: 768px) {
+      .section-5 {
+        padding-inline: 3.9rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .div {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .section-5 {
+        gap: 3rem;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-5 {
+        padding: 16rem 16.5rem 0 16.5rem;
+      }
+    }
+
+    // section 6
+    .section-6 {
+      padding: 12rem 2.4rem 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      picture {
+        img {
+          max-width: 100%;
+          border-radius: 0.8rem;
+        }
+      }
+
+      .text-content {
+        h2 {
+          margin: 4rem 0 0;
+          text-transform: uppercase;
+          @include fontStyles(2.8rem, 700, 3.8rem, 0.1rem);
+
+          span {
+            color: $dark_brown;
+          }
+        }
+
+        p {
+          max-width: 57.3rem;
+          margin: 3.2rem 0 0;
+          @include fontStyles(1.5rem, 500, 2.5rem, 0);
+        }
+      }
+    }
+
+    // media for section 6
+    @media (min-width: 768px) {
+      .section-6 {
+        padding: 12rem 3.9rem 0;
+
+        .text-content {
+          h2 {
+            max-width: 57.3rem;
+            @include fontStyles(4rem, 700, 4.4rem, 0.142rem);
+            margin: 6.3rem 0 0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .section-6 {
+        padding: 16rem 16.5rem 0;
+        flex-direction: row-reverse;
+        gap: 12.5rem;
+        text-align: left;
+
+        .text-content {
+          h2,
+          p {
+            max-width: 44.5rem;
+          }
+        }
+      }
+    }
+  }
+}

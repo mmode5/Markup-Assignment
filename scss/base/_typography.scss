@@ -1,0 +1,11 @@
+$fontFamily: "Manrope", sans-serif;
+$fontSize: 62.5%;
+
+:root {
+  font-size: $fontSize;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: 1.6rem;
+}
